@@ -1,13 +1,14 @@
-
 pipeline {
 
     agent any
 
     stages {
-	stage('Validation lancement') {
+
+        stage('Validation lancement') {
             steps {
-                input message: 'Lancer le pipeline ?', ok: 'Démarrer'
+                input message: 'Lancer le pipeline ?', ok: 'oui'
             }
+        }
 
         stage('Creation env') {
             steps {
